@@ -1,0 +1,9 @@
+# wrangler.toml
+name = "portfolio-website"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-04-03"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "portfolia"
+database_id = "7af230f7-eabb-4965-8a98-a677b31479ec"
