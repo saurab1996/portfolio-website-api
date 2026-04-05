@@ -1,5 +1,5 @@
 # wrangler.toml
-name = "portfolio-website"
+name = "portfolio-website-api"
 pages_build_output_dir = "./dist"
 compatibility_date = "2026-04-03"
 
