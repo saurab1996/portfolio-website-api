@@ -1,5 +1,5 @@
 
-import { corsHeaders } from "./cors-header";
+import { corsHeaders } from "../cors-header";
 
 interface ContactRequest {
   name: string;
