@@ -59,7 +59,12 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return Response.json({ success: true }, { headers: corsHeaders });
   } catch (err: any) {
     console.error("ERROR:", err);
-
+    if (err?.message?.includes("UNIQUE constraint failed")) {
+      return Response.json(
+        { error: "You've already sent this exact message." },
+        { status: 409, headers: corsHeaders }
+      );
+    }
     return Response.json(
       { error: err?.message || "Server error" },
       { status: 500, headers: corsHeaders }
