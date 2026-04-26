@@ -1,16 +1,11 @@
-// functions/api/contact.ts
+
+import { corsHeaders } from "./cors-header";
 
 interface ContactRequest {
   name: string;
   email: string;
   message: string;
 }
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "https://saurabgupta.in",
-  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, X-Admin-Key",
-};
 
 // ─── PUBLIC: POST /api/contact ──────────────────────────────
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
